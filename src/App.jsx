@@ -1,34 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from 'react'
+import Navbar from './components/Navbar/Navbar'
+import Hero from './components/Hero/Hero'
+import Education from './components/Education/Education'
+import Experience from './components/Experience/Experience'
+import Projects from './components/Projects/Projects'
+import Substack from './components/Substack/Substack'
+import ArtGallery from './components/ArtGallery/ArtGallery'
+import SocialLinks from './components/SocialLinks/SocialLinks'
+import Footer from './components/Footer/Footer'
+import './styles/global.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    // Add smooth scroll polyfill for Safari
+    if ('scrollBehavior' in document.documentElement.style) {
+      return
+    }
+    import('scroll-behavior-polyfill').then(() => {
+      console.log('Smooth scroll polyfill loaded')
+    })
+  }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app">
+      <Navbar />
+      <main>
+        <section id="hero" className="section">
+          <Hero />
+        </section>
+        <section id="education" className="section">
+          <Education />
+        </section>
+        <section id="experience" className="section">
+          <Experience />
+        </section>
+        <section id="projects" className="section">
+          <Projects />
+        </section>
+        <section id="substack" className="section">
+          <Substack />
+        </section>
+        <section id="art-gallery" className="section">
+          <ArtGallery />
+        </section>
+        <SocialLinks />
+      </main>
+      <Footer />
+    </div>
   )
 }
 
