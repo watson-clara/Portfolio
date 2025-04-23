@@ -1,0 +1,51 @@
+.svgHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.svgLetter {
+  height: 60px;
+  width: auto;
+  animation: letterPop 0.5s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.8);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.space {
+  width: 1rem;
+  display: inline-block;
+}
+
+@keyframes letterPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .svgLetter {
+    height: 50px;
+  }
+  .space {
+    width: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .svgLetter {
+    height: 40px;
+  }
+  .space {
+    width: 0.6rem;
+  }
+} 

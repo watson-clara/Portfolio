@@ -1,0 +1,90 @@
+:root {
+  /* Color Variables */
+  --primary-color: #FFA2BA; /* Light pink */
+  --secondary-color: #FF2580; /* Dark pink */
+  --accent-color: #FF2F32; /* Red */
+  --background-color: #FFE5ED; /* Offwhite */
+
+
+}
+.contact {
+  padding: 4rem 2rem;
+  color: var(--text-color);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contactContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contactInfo {
+  text-align: center;
+}
+
+.contactInfo p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-paper);
+  color: var(--secondary-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--secondary-color);
+  flex-shrink: 0;
+}
+
+.socialLink:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(255, 37, 128, 0.2);
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+
+  .socialLinks {
+    gap: 2rem;
+    max-width: 300px;
+  }
+
+  .socialLink {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+} 

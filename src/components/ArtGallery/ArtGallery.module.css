@@ -1,0 +1,200 @@
+:root {
+  /* Color Variables */
+  --primary-color: hsl(345, 100%, 82%); /* Light pink */
+  --secondary-color: #FF2580; /* Dark pink */
+  --accent-color: #FF2F32; /* Red */
+  --background-color: #FFE5ED; /* Offwhite */
+  --color-text-main: #333;
+  --color-text-secondary: #666;
+}
+
+.artGallery {
+  padding: 4rem 8rem;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  color: var(--color-text-main);
+  text-align: center;
+
+}
+
+
+
+.categorySection {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.categorySection:last-child {
+  margin-bottom: 0;
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  text-align: left;
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.categoryTitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: -1rem;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.artCard {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 37, 128, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 1;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.artCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(255, 37, 128, 0.15);
+}
+
+.artImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.artCard:hover .thumbnail {
+  transform: scale(1.05);
+}
+
+.artContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 1rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.artCard:hover .artContent {
+  opacity: 1;
+}
+
+.artTitle {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.artDescription {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.viewDetails {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+
+.link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .categoryTitle {
+    font-size: 1.3rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .artTitle {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .artDescription {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoryTitle {
+    font-size: 1.2rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .artTitle {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .artDescription {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+  }
+} 

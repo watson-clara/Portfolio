@@ -1,12 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=block');
+
+/* Preload Caveat font */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/caveat/v17/WnznHAc5bAfYB2QRah7pcpNvOx-pjRV6SIKjYBxPo.ttf) format('truetype');
+}
 
 :root {
-  --color-background: #FFF7F1;
-  --color-pastel-blue: #A7C7E7;
-  --color-soft-pink: #F7C8E0;
-  --color-mint: #B5EAD7;
-  --color-text-main: #3A3A3A;
-  --color-text-secondary: #666666;
+  /* Color Variables */
+  --primary-color: #FFA2BA; /* Light pink */
+  --secondary-color: #FF2580; /* Dark pink */
+  --accent-color: #FF2F32; /* Red */
+  --background-color: #FFE5ED; /* Offwhite */
+  --text-color: #333;
+  --border-color: #FFA2BA;
+  --shadow-color: rgba(255, 37, 128, 0.1);
+  
+  /* Additional color variables used in components */
+  --color-text-main: #333;
+  --color-text-secondary: #666;
+  --color-background: #FFE5ED;
+  --color-paper: #FFF7F1;
+  --color-paper-shadow: rgba(0, 0, 0, 0.05);
+  --color-pastel-pink: #FFE5ED;
+  --color-soft-pink: #FFA2BA;
+  --color-pastel-blue: #E5F1FF;
 }
 
 * {
@@ -20,15 +41,82 @@ html {
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-text-main);
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, var(--color-paper) 21px, transparent 1%) center,
+    linear-gradient(var(--color-paper) 21px, transparent 1%) center,
+    var(--color-pastel-pink);
+  background-size: 22px 22px;
+  z-index: -2;
+  background-position: 0 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 20px,
+      var(--color-paper-shadow) 20px,
+      var(--color-paper-shadow) 21px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 20px,
+      var(--color-paper-shadow) 20px,
+      var(--color-paper-shadow) 21px
+    );
+  z-index: -1;
+  pointer-events: none;
+  background-position: 0 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .section {
@@ -37,8 +125,37 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 247, 241, 0.8);
+  backdrop-filter: blur(2px);
+  max-width: var(--max-width);
+  
+  margin: 0 auto;
 }
 
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: var(--max-width);
+  background: 
+    linear-gradient(90deg, transparent 21px, rgba(0, 0, 0, 0.05) 1%) center,
+    linear-gradient(transparent 21px, rgba(0, 0, 0, 0.05) 1%) center;
+  background-size: 22px 22px;
+
+  z-index: -1;
+  opacity: 0.3;
+}
+
+
+
+
+/* Animation Classes */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -50,8 +167,33 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
+/* Media Queries */
+@media (max-width: 1200px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .container {
+    padding: 0.5rem;
+  }
 } 

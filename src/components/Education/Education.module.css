@@ -1,0 +1,190 @@
+:root {
+  /* Color Variables */
+  --primary-color: #FFA2BA; /* Light pink */
+  --secondary-color: #FF2580; /* Dark pink */
+  --accent-color: #FF2F32; /* Red */
+  --background-color: #FFE5ED; /* Offwhite */
+
+}
+
+.education {
+  padding: 2rem 0;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+.title {
+  text-align: center;
+
+}
+
+.degreeCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: .5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+ max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 4px solid #FF147C;
+}
+
+.capstoneGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.capstoneCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-left: 4px solid #FF222D;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.capstoneCard:hover {
+  transform: translateY(-5px);
+}
+
+.capstoneCard .degree {
+  margin-top: 0;
+}
+
+.capstoneCard .primaryButton {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.degree {
+
+  font-weight: 600;
+  font-size: 1.1rem;  
+  color: #2d3436;
+}
+
+.school {
+  font-size: .9rem;
+  color: #FF147C;
+  padding-bottom: .3rem;
+  font-weight: 500;
+}
+
+.description {
+  font-size: .9rem;
+  line-height: 1.4;
+  color: #636e72;
+ 
+}
+
+.bulletList {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  
+  
+}
+
+.bulletItem {
+  font-size: .9rem;
+  line-height: 1.4;
+  color: #636e72;
+  padding-bottom: .7rem;
+  
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding: 1.5rem 0;
+  }
+
+  .container {
+    padding: 0 0.8rem;
+  }
+
+  
+
+  .degreeCard {
+    padding: 1rem;
+   
+  }
+
+  .capstoneGrid {
+    grid-template-columns: 1fr;
+   
+  }
+
+  .capstoneCard {
+    padding: 1rem;
+  }
+
+  .degree {
+    font-size: 1.1rem;
+  }
+
+  .school {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .bulletItem {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .education {
+    padding: 1rem 0;
+  }
+
+  .container {
+    padding: 0 0.6rem;
+  }
+
+  .bulletItem {
+    font-size: .7rem;
+  }
+
+  .degreeCard,
+  .capstoneCard {
+    padding: 0.8rem;
+   
+  }
+
+  .capstoneGrid {
+    gap: 1rem;
+  }
+
+  .degree {
+    font-size: 1rem;
+  }
+
+  .school {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .bulletItem {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+} 

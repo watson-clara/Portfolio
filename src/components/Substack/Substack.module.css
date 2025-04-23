@@ -1,0 +1,476 @@
+:root {
+  /* Color Variables */
+  --primary-color: #FFA2BA; /* Light pink */
+  --secondary-color: #FF2580; /* Dark pink */
+  --accent-color: #FF2F32; /* Red */
+  --background-color: #FFE5ED; /* Offwhite */
+}
+
+.substack {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 4rem 0;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  width: 100%;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  margin: 0;
+}
+
+.subscribeButton {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 0.1rem;
+}
+
+/* Slider Styles */
+.slider {
+  
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sliderContent {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.sliderTrack {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  gap: 1.5rem;
+  
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.postWrapper {
+  background: var(--color-card-background);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border: 1px solid var(--color-border);
+}
+
+.postWrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.postImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.postWrapper:hover .postImage {
+  transform: scale(1.05);
+}
+
+.postContent {
+  
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.postContent h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+  color: var(--color-text-main);
+}
+
+.postContent p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--color-text-secondary);
+  flex-grow: 1;
+}
+
+.readMore {
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: auto;
+}
+
+.readMore:hover {
+  color: var(--primary-color);
+}
+
+.sliderNav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.sliderDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 37, 128, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.sliderDot.active {
+  background: #FF2580;
+}
+
+.sliderButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  color: var(--color-text-main);
+}
+
+.sliderButton:hover {
+  background: var(--color-background-hover);
+  color: var(--color-primary);
+}
+
+.sliderButton.prev {
+  left: 0;
+}
+
+.sliderButton.next {
+  right: 0;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 37, 128, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: modalIn 0.3s ease;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-main);
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.closeButton:hover {
+  opacity: 1;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .slide {
+    flex: 0 0 calc(50% - 1rem);
+    min-width: calc(50% - 1rem);
+  }
+  .sliderTrack {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide {
+    flex: 0 0 calc(33.333% - 1.333rem);
+    min-width: calc(33.333% - 1.333rem);
+  }
+
+}
+
+@media (max-width: 767px) {
+  .slider {
+    padding: 0 1rem;
+  }
+  
+  .sliderContent {
+    margin: 0 -1rem;
+    padding: 0 1rem;
+  }
+  
+  .sliderButton {
+    display: none;
+  }
+  .sliderTrack {
+   
+    margin: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  
+  .sliderButton {
+    display: flex;
+  }
+  .sliderContent {
+    margin: 0 0rem;
+    padding: 0 1rem;
+  }
+  .sliderTrack {
+    gap: .5rem;
+  }
+}
+
+/* Desktop Grid View */
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.postWrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+/* Mobile Carousel View */
+.carouselContainer {
+  display: none;
+  width: 100%;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.carouselSlide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  padding: 0 1rem;
+}
+
+.carouselNav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.carouselDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 37, 128, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.carouselDot.active {
+  background: #FF2580;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .postsGrid {
+    display: none;
+  }
+
+  .carouselContainer {
+    display: block;
+  }
+  .postContent h3 {
+    font-size: .8rem;
+  }
+  .postContent p {
+    font-size: .7rem;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .postWrapper {
+    padding: 0.75rem;
+  }
+
+  .postContent h3 {
+    font-size: .7rem;
+
+  }
+
+  .postContent p {
+    font-size: .6rem;
+  }
+
+
+  
+}
+
+.subscribeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 480px;
+  width: 100%;
+}
+
+.subscribeContainer iframe {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.postCard {
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.postCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.postContent {
+  padding-top: .5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+
+
+.postContent p {
+
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.postContent a {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+  .postsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  
+  
+} 
