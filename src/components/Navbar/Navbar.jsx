@@ -1,10 +1,5 @@
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
-import clara1 from '../../assets/clara1.svg';
-import clara2 from '../../assets/clara2.svg';
-import clara3 from '../../assets/clara3.svg';
-import clara4 from '../../assets/clara4.svg';
-import clara5 from '../../assets/clara5.svg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,11 +46,11 @@ const Navbar = () => {
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isLoaded ? styles.loaded : ''}`}>
       <div className={styles.container}>
         <div className={styles.logo} onClick={scrollToTop} style={{ cursor: 'pointer' }}>
-          <img src={clara1} alt="C" className={styles.nameLetter} style={{ '--delay': '0.1s' }} />
-          <img src={clara2} alt="L" className={styles.nameLetter} style={{ '--delay': '0.2s' }} />
-          <img src={clara3} alt="A" className={styles.nameLetter} style={{ '--delay': '0.3s' }} />
-          <img src={clara4} alt="R" className={styles.nameLetter} style={{ '--delay': '0.4s' }} />
-          <img src={clara5} alt="A" className={styles.nameLetter} style={{ '--delay': '0.5s' }} />
+          <img src="/assets/clara1.svg" alt="C" className={styles.nameLetter} style={{ '--delay': '0.1s' }} />
+          <img src="/assets/clara2.svg" alt="L" className={styles.nameLetter} style={{ '--delay': '0.2s' }} />
+          <img src="/assets/clara3.svg" alt="A" className={styles.nameLetter} style={{ '--delay': '0.3s' }} />
+          <img src="/assets/clara4.svg" alt="R" className={styles.nameLetter} style={{ '--delay': '0.4s' }} />
+          <img src="/assets/clara5.svg" alt="A" className={styles.nameLetter} style={{ '--delay': '0.5s' }} />
         </div>
         
         {/* Mobile menu button */}
