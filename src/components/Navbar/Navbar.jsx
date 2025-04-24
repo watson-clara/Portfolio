@@ -46,11 +46,11 @@ const Navbar = () => {
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isLoaded ? styles.loaded : ''}`}>
       <div className={styles.container}>
         <div className={styles.logo} onClick={scrollToTop} style={{ cursor: 'pointer' }}>
-          <img src="/assets/clara1.svg" alt="C" className={styles.nameLetter} style={{ '--delay': '0.1s' }} />
-          <img src="/assets/clara2.svg" alt="L" className={styles.nameLetter} style={{ '--delay': '0.2s' }} />
-          <img src="/assets/clara3.svg" alt="A" className={styles.nameLetter} style={{ '--delay': '0.3s' }} />
-          <img src="/assets/clara4.svg" alt="R" className={styles.nameLetter} style={{ '--delay': '0.4s' }} />
-          <img src="/assets/clara5.svg" alt="A" className={styles.nameLetter} style={{ '--delay': '0.5s' }} />
+          <img src="/Portfolio/assets/clara1.svg" alt="C" className={styles.nameLetter} style={{ '--delay': '0.1s' }} />
+          <img src="/Portfolio/assets/clara2.svg" alt="L" className={styles.nameLetter} style={{ '--delay': '0.2s' }} />
+          <img src="/Portfolio/assets/clara3.svg" alt="A" className={styles.nameLetter} style={{ '--delay': '0.3s' }} />
+          <img src="/Portfolio/assets/clara4.svg" alt="R" className={styles.nameLetter} style={{ '--delay': '0.4s' }} />
+          <img src="/Portfolio/assets/clara5.svg" alt="A" className={styles.nameLetter} style={{ '--delay': '0.5s' }} />
         </div>
         
         {/* Mobile menu button */}
