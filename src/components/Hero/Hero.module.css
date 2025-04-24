@@ -88,10 +88,11 @@ button:hover {
 
 .ctaContainer {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
   margin-top: 3rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 /* Scroll Indicator Styles */
@@ -203,9 +204,11 @@ button:hover {
 
   .ctaContainer {
     flex-direction: column;
-    gap: 0.8rem;
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .mouse {

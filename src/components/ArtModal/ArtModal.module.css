@@ -16,12 +16,15 @@
 .modal {
   background: var(--background-color);
   border-radius: 16px;
-  max-width: fit-content;
+  width: 90vw;
+  max-width: 1200px;
   max-height: 90vh;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   animation: modalIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .closeButton {
@@ -51,32 +54,35 @@
 .modalContent {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
 }
 
 .imageContainer {
   display: flex;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 2rem;
   justify-content: center;
+  align-items: center;
+  width: 100%;
   max-height: 70vh;
+  padding: 0 2rem;
 }
 
 .mainImage,
 .progressImage {
+  max-width: 45%;
   height: auto;
-  max-height: 70vh;
-  width: auto;
-  max-width: 45vw;
+  max-height: 65vh;
   object-fit: contain;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
 .singleImage {
+  max-width: 90%;
   height: auto;
-  max-height: 70vh;
-  width: auto;
-  max-width: 90vw;
+  max-height: 65vh;
   object-fit: contain;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -92,6 +98,8 @@
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.9);
   width: 100%;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .title {
@@ -123,15 +131,30 @@
     padding: 1rem;
   }
 
+  .modal {
+    width: 95vw;
+    max-height: 95vh;
+  }
+
+  .modalContent {
+    padding: 1rem;
+  }
+
   .imageContainer {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
+    padding: 0 1rem;
   }
 
   .mainImage,
-  .progressImage,
+  .progressImage {
+    max-width: 100%;
+    max-height: 40vh;
+  }
+
   .singleImage {
-    max-width: 85vw;
+    max-width: 100%;
+    max-height: 60vh;
   }
 
   .artworkInfo {
