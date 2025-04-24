@@ -49,32 +49,32 @@ export const artworks = [
     title: "Still Life Coverse",
     description: "Colored pencil still life drawing of my shoes and skateboard.",
     category: "drawings",
-    finalImage: "/assets/converse2.svg",
-    progressImage: "/assets/converse1.svg",
-    thumbnail: "/assets/converse2.svg"
+    finalImage: "assets/converse2.svg",
+    progressImage: "assets/converse1.svg",
+    thumbnail: "assets/converse2.svg"
   },
   {
     id: 6,
     title: "Kitty",
     description: "Color pencil portrait of a cat.",
     category: "drawings",
-    finalImage: "/assets/kitty.svg",
-    thumbnail: "/assets/kitty.svg"
+    finalImage: "assets/kitty.svg",
+    thumbnail: "assets/kitty.svg"
   },
   {
     id: 7,
     title: "Journey to The Heart",
     description: "Abstract digital art.",
     category: "digital-art",
-    finalImage: "/assets/heart.svg", 
-    thumbnail: "/assets/heart.svg"
+    finalImage: "assets/heart.svg", 
+    thumbnail: "assets/heart.svg"
   },
   {
     id: 8,
     title: "Eyes",
     description: "Digital artwork surreal and abstract.",
     category: "digital-art",
-    finalImage: "/assets/eyesd.svg",
-    thumbnail: "/assets/eyesd.svg"
+    finalImage: "assets/eyesd.svg",
+    thumbnail: "assets/eyesd.svg"
   }
 ]; 
