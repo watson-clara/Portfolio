@@ -15,34 +15,34 @@ export const artworks = [
     title: "Baby",
     description: "Color pencil portrait of a baby.",
     category: "drawings",
-    finalImage: "/Portfolio/assets/baby1.svg",
-    thumbnail: "/Portfolio/assets/baby1.svg"
+    finalImage: "assets/baby1.svg",
+    thumbnail: "assets/baby1.svg"
   },
   {
     id: 2,
     title: "Lorde",
     description: "Graphite portrait of Lorde.",
     category: "drawings",
-    finalImage: "/Portfolio/assets/lorde.svg",
-    thumbnail: "/Portfolio/assets/lorde.svg"
+    finalImage: "assets/lorde.svg",
+    thumbnail: "assets/lorde.svg"
   },
   {
     id: 3,
     title: "Mars Argo",
     description: "Color pencil portrait of Mars Argo.",
     category: "drawings",
-    finalImage: "/Portfolio/assets/mars2.svg",
-    progressImage: "/Portfolio/assets/mars1.svg",
-    thumbnail: "/Portfolio/assets/mars2.svg"
+    finalImage: "assets/mars2.svg",
+    progressImage: "assets/mars1.svg",
+    thumbnail: "assets/mars2.svg"
   },
   {
     id: 4,
     title: "Lana Del Rey",
     description: "Color pencil portrait of Lana Del Rey.",
     category: "drawings",
-    finalImage: "/Portfolio/assets/lana1.svg",
-    progressImage: "/Portfolio/assets/lana2.svg",
-    thumbnail: "/Portfolio/assets/lana2.svg"
+    finalImage: "assets/lana1.svg",
+    progressImage: "assets/lana2.svg",
+    thumbnail: "assets/lana2.svg"
   },
   {
     id: 5,
