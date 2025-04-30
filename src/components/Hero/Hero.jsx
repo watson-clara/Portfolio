@@ -72,7 +72,6 @@ const Hero = () => {
         <FadeIn delay={0.8}>
           <div className={styles.ctaContainer}>
             <a href="#projects" className="primaryButton">View My Work</a>
-            <a href="assets/clara_watson_resume.pdf" download className="primaryButton">Download Resume</a>
             <a href="#contact" className="secondaryButton">Get in Touch</a>
           </div>
         </FadeIn>
