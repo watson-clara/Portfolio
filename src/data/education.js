@@ -20,7 +20,7 @@ export const educationData = [
     degree: "Capstone Project",
     school: "AgBizClimate",
     description: "",
-    link: "https://github.com/yourusername/AgBizClimate",
+    link: "https://www.agbizlogic.com/about/\#climate",
     bullets: [
       "Developed interactive climate data analysis platform integrating historical climate datasets & predictive weather models.",
       "Designed data-driven visualizations using Chart.js to enhance decision-making for agriculture and energy applications.",

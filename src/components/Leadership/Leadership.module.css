@@ -11,7 +11,7 @@
   padding-bottom: .5rem;
 }
 
-.education {
+.leadership {
   padding: 2rem 0;
 
 }
@@ -22,12 +22,12 @@
   padding: 0 5rem;
 }
 
-.title {
+.titleSection {
   text-align: center;
 
 }
 
-.degreeCard {
+.card {
   background-color: #ffffff;
   border-radius: 12px;
   padding: .5rem;
@@ -37,41 +37,11 @@
   margin-left: auto;
   margin-right: auto;
   border-left: 4px solid #FF147C;
-}
-
-.capstoneGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.capstoneCard {
-  background-color: #ffffff;
-  border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  border-left: 4px solid #FF222D;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  
 }
 
-.capstoneCard:hover {
-  transform: translateY(-5px);
-}
 
-.capstoneCard .degree {
-  margin-top: 0;
-}
-
-.capstoneCard .primaryButton {
-  margin-top: auto;
-  align-self: flex-start;
-}
-
-.degree {
+.title {
 
   font-weight: 600;
   font-size: 1.1rem;  
@@ -110,7 +80,7 @@
 }
 
 @media (max-width: 768px) {
-  .education {
+  .leadership {
     padding: 1.5rem 0;
   }
 
@@ -120,21 +90,13 @@
 
   
 
-  .degreeCard {
+  .card {
     padding: 1rem;
    
   }
 
-  .capstoneGrid {
-    grid-template-columns: 1fr;
-   
-  }
 
-  .capstoneCard {
-    padding: 1rem;
-  }
-
-  .degree {
+  .title {
     font-size: 1.1rem;
   }
 
@@ -154,7 +116,7 @@
 }
 
 @media (max-width: 480px) {
-  .education {
+  .leadership {
     padding: 1rem 0;
   }
 
@@ -166,17 +128,8 @@
     font-size: .7rem;
   }
 
-  .degreeCard,
-  .capstoneCard {
-    padding: 0.8rem;
-   
-  }
 
-  .capstoneGrid {
-    gap: 1rem;
-  }
-
-  .degree {
+  .title {
     font-size: 1rem;
   }
 

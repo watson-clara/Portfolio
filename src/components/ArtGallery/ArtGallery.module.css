@@ -8,10 +8,7 @@
   --color-text-secondary: #666;
 }
 
-.artGallery {
-  padding: 4rem 8rem;
-  
-}
+
 
 .container {
   max-width: 1200px;
@@ -157,8 +154,16 @@
 .link:hover {
   color: var(--accent-color);
 }
+.artGallery {
+  padding: 4rem 8rem;
+  
+}
 
 @media (max-width: 768px) {
+  .artGallery {
+  padding: 0rem 0rem;
+  
+}
   .categoryTitle {
     font-size: 1.3rem;
   }
@@ -179,6 +184,10 @@
 }
 
 @media (max-width: 480px) {
+  .artGallery {
+  padding: 0rem 0rem;
+  
+}
   .categoryTitle {
     font-size: 1.2rem;
   }

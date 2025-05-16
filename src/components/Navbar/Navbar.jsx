@@ -65,8 +65,9 @@ const Navbar = () => {
         </button>
         
         <ul className={`${styles.navLinks} ${isMobileMenuOpen ? styles.open : ''}`}>
-          <li><button onClick={() => scrollToSection('hero')} style={{ '--delay': '0.6s' }}>Home</button></li>
-          <li><button onClick={() => scrollToSection('education')} style={{ '--delay': '0.7s' }}>Education</button></li>
+          <li><button onClick={() => scrollToSection('hero')} style={{ '--delay': '0.5s' }}>Home</button></li>
+          <li><button onClick={() => scrollToSection('education')} style={{ '--delay': '0.6s' }}>Education</button></li>
+          <li><button onClick={() => scrollToSection('leadership')} style={{ '--delay': '0.7s' }}>Leadership</button></li>
           <li><button onClick={() => scrollToSection('experience')} style={{ '--delay': '0.8s' }}>Experience</button></li>
           <li><button onClick={() => scrollToSection('projects')} style={{ '--delay': '0.9s' }}>Projects</button></li>
           <li><button onClick={() => scrollToSection('substack')} style={{ '--delay': '1s' }}>Substack</button></li>

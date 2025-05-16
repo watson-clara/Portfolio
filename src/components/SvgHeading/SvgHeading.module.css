@@ -1,10 +1,18 @@
+/* SvgHeading.module.css */
+
 .svgHeading {
   display: flex;
+  flex-wrap: wrap;          /* allow breaks between words */
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
   margin: 2rem 0;
-  flex-wrap: wrap;
+}
+
+.word {
+  display: inline-flex;     /* group letters as one unbreakable unit */
+  flex-wrap: nowrap;        /* never wrap inside a word */
+  gap: 0.2rem;              /* optional letter spacing */
 }
 
 .svgLetter {
@@ -14,11 +22,6 @@
   opacity: 0;
   transform: scale(0.8);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-}
-
-.space {
-  width: 1rem;
-  display: inline-block;
 }
 
 @keyframes letterPop {
@@ -32,12 +35,10 @@
   }
 }
 
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .svgLetter {
     height: 50px;
-  }
-  .space {
-    width: 0.8rem;
   }
 }
 
@@ -45,7 +46,4 @@
   .svgLetter {
     height: 40px;
   }
-  .space {
-    width: 0.6rem;
-  }
-} 
+}

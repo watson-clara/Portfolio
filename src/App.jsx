@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import Education from './components/Education/Education'
+import Leadership from './components/Leadership/Leadership'
 import Experience from './components/Experience/Experience'
 import Projects from './components/Projects/Projects'
 import Substack from './components/Substack/Substack'
@@ -30,6 +31,9 @@ function App() {
         </section>
         <section id="education" className="section">
           <Education />
+        </section>
+        <section id="leadership" className="section">
+          <Leadership />
         </section>
         <section id="experience" className="section">
           <Experience />
