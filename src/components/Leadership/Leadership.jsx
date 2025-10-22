@@ -8,7 +8,7 @@ function Leadership() {
       title: "Startup Advisory Board Member",
       startup: "NetU",
       link: "https://www.NetU.ai/",
-        description: "I helped launch NetU as a Software Engineer Advisor on the advisory board, including conducting thorough usability audits for the entire website to assess UX, UI, and overall usability. I am also actively involved in recruiting beta testers and first adopters for the platform. NetU is a social gaming app that connects users and showcases their skills and creativity.",
+        description: "I helped launch NetU as a Software Engineer Advisor on the advisory board, including conducting thorough usability audits for the entire website to assess UX, UI, and overall usability. I am also actively involved in recruiting beta testers and first adopters for the platform. NetU.ai supercharges networking for businesses and professionals locally and globally.",
       button: "View Website"
 
     },
