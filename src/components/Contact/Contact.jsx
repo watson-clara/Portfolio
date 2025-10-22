@@ -64,18 +64,7 @@ const Contact = () => {
               </a>
             </FadeIn>
 
-             <FadeIn delay={0.2}>
-              <a 
-                href="https://clarafication.gumroad.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-                aria-label="Gumroad"
-                title='Gumroad - My Digital Store'
-              >
-                <SiGumroad className={styles.icon} />
-              </a>
-            </FadeIn>
+            
           </div>
         </div>
       </div>
