@@ -6,6 +6,14 @@ function Leadership() {
   const lead = [
     {
       title: "Startup Advisory Board Member",
+      startup: "NetU",
+      link: "https://www.NetU.ai/",
+        description: "I helped launch NetU as a Software Engineer Advisor on the advisory board, including conducting thorough usability audits for the entire website to assess UX, UI, and overall usability. I am also actively involved in recruiting beta testers and first adopters for the platform. NetU is a social gaming app that connects users and showcases their skills and creativity.",
+      button: "View Website"
+
+    },
+    {
+      title: "Startup Advisory Board Member",
       startup: "Pagent Social Corp.",
       link: "https://www.pagent.tv/",
       description: "As a Software Engineer Advisor on Pagent’s advisory board, I reviewed core technical strategy and validated the product roadmap, then helped craft and present the platform’s value proposition to investors, contributing to successful funding rounds. Pagent is a social gaming app that connects users and showcases their skills and creativity.",

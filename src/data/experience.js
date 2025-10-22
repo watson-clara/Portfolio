@@ -1,7 +1,7 @@
 export const experiences = [
   {
     company: "Opt8 Automations",
-    role: "Software Engineer",
+    role: "Software Engineer & Startup Advisor",
     period: "September 2023 – Present",
     location: "Remote",
     description: "Currently developing scalable web applications, APIs, and automation solutions. Focused on implementing cloud infrastructure, system integrations, and building efficient automation tools to streamline business processes.",
@@ -12,7 +12,9 @@ export const experiences = [
       "Data Management: Designed and optimized both relational and non-relational database schemas for efficient data storage and retrieval",
       "Project Management: Oversaw end-to-end project lifecycle, from development to deployment and ongoing maintenance",
       "Quality Assurance: Implemented comprehensive unit and integration testing frameworks to ensure software reliability",
-      "DevOps: Established Git-based workflows and CI/CD pipelines to streamline development and deployment processes"
+      "DevOps: Established Git-based workflows and CI/CD pipelines to streamline development and deployment processes",
+      "Usability Audits: Conducted thorough usability audits for NetU’s website, assessing UX, UI, and overall experience to recommend design and process improvements.",
+      "Advisory Board Positions: Serve as a Software Engineer Advisor on the startup advisory boards for both NetU and Pagent, contributing technical strategy, product feedback, and early user/adopter recruitment."
     ]
   },
   {
