@@ -36,9 +36,35 @@ function Leadership() {
           <SvgHeading name="leadership" className={styles.titleSection} />
         </FadeIn>
 
-        {/* Degree Section */}
-        {lead.map((item, index) => (
-          <FadeIn>
+        {/* Startup Advisory Section - Side by Side */}
+        <FadeIn>
+          <div className={styles.advisoryContainer}>
+            {lead.slice(0, 2).map((item, index) => (
+              <div key={index} className={styles.advisoryCard}>
+                <h3 className={styles.title}>{item.title}</h3>
+                <div className={styles.school}>{item.startup}</div>
+                <div className={styles.space}>{item.description && (
+                  <p className={styles.description}>{item.description}</p>
+                )}</div>
+
+                {item.link && (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="smallButton primary "
+                  >
+                   {item.button}
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+
+        {/* Art Club Section */}
+        {lead.slice(2).map((item, index) => (
+          <FadeIn key={index + 2}>
             <div className={styles.card}>
               <h3 className={styles.title}>{item.title}</h3>
               <div className={styles.school}>{item.startup}</div>
